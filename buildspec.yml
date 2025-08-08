@@ -20,7 +20,7 @@ phases:
       - mkdir -p build_artifacts
       - echo Hello, Codebuild!
       - echo creating a simple text file...
-      - echo 'Sample File Content" > build_artifacts/simple.txt
+      - echo "Sample File Content" > build_artifacts/simple.txt
   post_build:
     commands:
       - echo Post-build started...
