@@ -28,4 +28,7 @@ phases:
       - ls -la build_artifacts/
       - echo cleaning up temporary files...
       - rm -rf build_artifacts/
+artifacts:
+  files:
+      - build_artifacts/simple.txt
       
