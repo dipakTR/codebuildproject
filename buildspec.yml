@@ -3,32 +3,30 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo installing dependencies...
+      - echo "Installing dependencies..."
       - yum update -y
-      - echo Installing curl...
+      - echo "Installing curl..."
       - dnf install -y curl --skip-broken
   pre_build:
     commands:
-      - echo pre-build started...
-      - echo checking disk space
+      - echo "Pre-build started..."
+      - echo "Checking disk space"
       - df -h
 
   build:
     commands:
-      - echo Build Started...
-      - echo Creating a directory for build artifacts...
+      - echo "Build Started..."
+      - echo "Creating a directory for build artifacts..."
       - mkdir -p build_artifacts
-      - echo Hello, Codebuild!
-      - echo creating a simple text file...
+      - echo "Hello, CodeBuild!"
+      - echo "Creating a simple text file..."
       - echo "Sample File Content" > build_artifacts/simple.txt
   post_build:
     commands:
-      - echo Post-build started...
-      - echo listening contents of build_artifacts directory...
+      - echo "Post-build started..."
+      - echo "Listing contents of build_artifacts directory..."
       - ls -la build_artifacts/
-      - echo cleaning up temporary files...
-      - rm -rf build_artifacts/
+
 artifacts:
   files:
-      - build_artifacts/simple.txt
-      
+    - build_artifacts/simple.txt
