@@ -21,6 +21,7 @@ phases:
       - echo "Hello, CodeBuild!"
       - echo "Creating a simple text file..."
       - echo "Sample File Content" > build_artifacts/simple.txt
+      - echo "Adding a new line for testing..." # New line added here
   post_build:
     commands:
       - echo "Post-build started..."
