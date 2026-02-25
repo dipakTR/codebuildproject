@@ -18,7 +18,7 @@ phases:
       - echo "Build Started..."
       - echo "Creating a directory for build artifacts..."
       - mkdir -p build_artifacts
-      - echo "Hello, CodeBuild!"
+      - echo "Hello, CodeBuild_world!"
       - echo "Creating a simple text file..."
       - echo "Sample File Content" > build_artifacts/simple.txt
       - echo "Adding a new line for testing..." # New line added here
