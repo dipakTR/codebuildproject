@@ -5,6 +5,7 @@ phases:
     commands:
       - echo "Installing dependencies..."
       - yum update -y
+      - yum install httpd -y
       - echo "Installing curl..."
       - dnf install -y curl --skip-broken
   pre_build:
